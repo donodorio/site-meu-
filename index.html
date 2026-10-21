@@ -1,0 +1,230 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henrique Soares | Videomaker</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080808;
+  color:#f5f5f5;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6
+}
+a{color:inherit;text-decoration:none}
+.container{width:90%;max-width:1150px;margin:auto}
+header{
+  padding:22px 0;
+  border-bottom:1px solid #252525;
+  position:sticky;top:0;
+  background:#080808ee;z-index:10
+}
+nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:21px;font-weight:900}
+.logo span,.orange{color:#ff6a1a}
+.links{display:flex;gap:22px;flex-wrap:wrap}
+.links a:hover{color:#ff6a1a}
+.hero{
+  min-height:85vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;gap:45px;
+  padding-top:65px;padding-bottom:85px
+}
+.eyebrow{
+  color:#ff6a1a;
+  text-transform:uppercase;
+  letter-spacing:3px;font-size:12px;font-weight:bold
+}
+h1{
+  font-size:clamp(48px,7vw,90px);
+  line-height:.98;margin:22px 0;
+  text-transform:uppercase;letter-spacing:-3px
+}
+h1 span{display:block;color:#ff6a1a}
+p{color:#aaa}
+.hero p{font-size:18px;max-width:520px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:13px 20px;
+  border:1px solid #ff6a1a;font-weight:bold
+}
+.btn.primary{background:#ff6a1a;color:#111}
+.btn:hover{opacity:.8}
+.photo{position:relative;max-width:450px;margin-left:auto;width:100%}
+.photo:after{
+  content:"";position:absolute;inset:18px -15px -15px 18px;
+  border:2px solid #ff6a1a;z-index:0
+}
+.photo img{
+  width:100%;aspect-ratio:4/5;object-fit:contain;
+  object-position:center bottom;background:#171717;
+  position:relative;z-index:1;display:block
+}
+section{padding:85px 0;border-top:1px solid #222}
+h2{font-size:clamp(34px,5vw,55px);line-height:1.1;margin:12px 0 20px}
+.section-intro{max-width:680px;margin-bottom:35px}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px}
+.initials{font-size:90px;font-weight:900;color:#ff6a1a}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:#121212;border:1px solid #292929;padding:27px}
+.service small{color:#ff6a1a;font-weight:bold;letter-spacing:1px}
+.service h3{margin:20px 0 10px;font-size:22px}
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.video{background:#121212;padding:10px;border:1px solid #292929}
+.video iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+.video p{padding:10px 5px 2px;font-size:14px}
+.contact{
+  padding:35px;background:#13100e;
+  border:1px solid #63351e;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:25px
+}
+.contact-links{display:flex;flex-direction:column;gap:12px}
+footer{padding:25px 0;color:#777;font-size:13px}
+@media(max-width:750px){
+  nav{align-items:flex-start;flex-direction:column}
+  .hero,.about{grid-template-columns:1fr}
+  .hero{padding-top:55px}
+  .photo{margin:10px auto 0;max-width:380px}
+  .services,.videos{grid-template-columns:1fr}
+  .contact{flex-direction:column;align-items:flex-start}
+  .links{gap:14px;font-size:14px}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#inicio">HENRIQUE <span>SOARES</span></a>
+    <div class="links">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#orcamento">Orçamento</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="container hero" id="inicio" style="border:0">
+    <div>
+      <div class="eyebrow">Videomaker • Filmagem • Edição</div>
+      <h1>Grandes <span>histórias.</span></h1>
+      <p>Transformo momentos e ideias em vídeos que despertam emoções. Da filmagem à edição, cada detalhe conta uma história.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#portfolio">VER MEU TRABALHO</a>
+        <a class="btn" href="#orcamento">PEDIR ORÇAMENTO</a>
+      </div>
+    </div>
+
+    <div class="photo">
+      <!-- Coloque sua foto de terno com o nome henrique-camera.jpg -->
+      <img src="henrique-camera.jpg" alt="Henrique Soares segurando uma câmera"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;padding:45px 20px;background:#171717;color:#aaa;position:relative;z-index:1">
+        Adicione sua foto de terno segurando a câmera com o nome henrique-camera.jpg
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container about">
+      <div>
+        <div class="eyebrow">Quem sou eu</div>
+        <div class="initials">HS.</div>
+      </div>
+      <div>
+        <h2>Imagem com intenção.<br><span class="orange">Histórias com identidade.</span></h2>
+        <p>Sou Henrique Soares, videomaker. Transformo ideias em imagens que comunicam, conectam e valorizam cada projeto. Trabalho com atenção aos detalhes para entregar vídeos com personalidade e qualidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">O que eu faço</div>
+        <h2>Meus serviços</h2>
+        <p>Soluções audiovisuais para transformar seu projeto em realidade.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <small>01 / FILMAGEM</small>
+          <h3>Captação de vídeos</h3>
+          <p>Filmagem de eventos, projetos, conteúdos e momentos especiais.</p>
+        </article>
+        <article class="service">
+          <small>02 / EDIÇÃO</small>
+          <h3>Edição de vídeos</h3>
+          <p>Edição de materiais gravados por mim ou enviados por você.</p>
+        </article>
+        <article class="service">
+          <small>03 / AO VIVO</small>
+          <h3>Operação de lives</h3>
+          <p>Operação de transmissões ao vivo para eventos e projetos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">Trabalhos selecionados</div>
+        <h2>Portfólio</h2>
+        <p>Conheça um pouco do meu trabalho audiovisual.</p>
+      </div>
+      <div class="videos">
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/_isaJ5utrNI" title="Vídeo 1" loading="lazy" allowfullscreen></iframe>
+          <p>Projeto audiovisual 01</p>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/ksddiKqDeuk" title="Vídeo 2" loading="lazy" allowfullscreen></iframe>
+          <p>Projeto audiovisual 02</p>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/fz3UriWOvfU" title="Vídeo 3" loading="lazy" allowfullscreen></iframe>
+          <p>Projeto audiovisual 03</p>
+        </div>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/dmxB_aDFYyo" title="Vídeo 4" loading="lazy" allowfullscreen></iframe>
+          <p>Projeto audiovisual 04</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="orcamento">
+    <div class="container contact">
+      <div>
+        <div class="eyebrow">Vamos conversar</div>
+        <h2>Seu projeto começa aqui.</h2>
+        <p>Entre em contato para pedir seu orçamento.</p>
+      </div>
+      <div class="contact-links">
+        <a class="btn primary" target="_blank" rel="noopener"
+           href="https://wa.me/5566999874147?text=Ol%C3%A1%2C%20Henrique!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento.">CHAMAR NO WHATSAPP</a>
+        <a class="btn" href="mailto:soreshenrique2026@gmail.com">ENVIAR E-MAIL</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Henrique Soares — Todos os direitos reservados.
+  </div>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+```
